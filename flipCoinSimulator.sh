@@ -1,11 +1,14 @@
 #!/bin/bash -x
 
-toss=$(( RANDOM % 2 ));
 isHead=1;
 isTail=0;
-if(( $toss == $isHead ));
-then
+for(( i=0; i<=10; i++ ))
+do
+  toss=$(( RANDOM % 2 ));
+  if(( $toss == $isHead ));
+  then
     echo "Head"
-else 
+  else 
     echo "Tails"
-fi
+  fi
+done
