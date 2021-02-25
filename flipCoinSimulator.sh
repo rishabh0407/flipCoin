@@ -1,3 +1,11 @@
 #!/bin/bash -x
 
-echo "Hello to the world of Toss Coin"
+toss=$(( RANDOM % 2 ));
+isHead=1;
+isTail=0;
+if(( $toss == $isHead ));
+then
+    echo "Head"
+else 
+    echo "Tails"
+fi
